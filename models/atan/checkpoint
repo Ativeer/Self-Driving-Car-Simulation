@@ -1,0 +1,2 @@
+model_checkpoint_path: "/content/drive/MyDrive/Dataset/dataset/models/atan/model_atan.ckpt"
+all_model_checkpoint_paths: "/content/drive/MyDrive/Dataset/dataset/models/atan/model_atan.ckpt"
