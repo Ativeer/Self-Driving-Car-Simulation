@@ -12,6 +12,18 @@ In this project, we describe a CNN that goes beyond pattern recognition. It lear
 
 Nine months ago, a new effort was started at NVIDIA that sought to build on DAVE and create a robust system for driving on public roads. The primary motivation for this work is to avoid the need to recognize specific human-designated features, such as lane markings, guard rails, or other cars, and to avoid having to create a collection of “if, then, else” rules, based on observation of these features. This project tries to implement the efforts of NVIDIA to verify its results.
 
+### Dataset:
+Our Dataset: https://drive.google.com/drive/u/0/folders/1OidK8_42W1nJsehySZvxD1Fu3vfHW5xh
+Size: 25 minutes = 256030 = 45,000 images ~ 2.3 GB
+
+If you want to try on a slightly large dataset: 70 minutes of data ~ 223GB Refer: https://medium.com/udacity/open-sourcing-223gb-of-mountain-view-driving-data-f6b5593fbfa5 Format: Image, latitude, longitude, gear, brake, throttle, steering angles and speed
+
+Youtube:https://www.youtube.com/watch?v=qhUvQiKec2U 
+
+Further reading and extensions: https://medium.com/udacity/teaching-a-machine-to-steer-a-car-d73217f2492c 
+
+More data: https://medium.com/udacity/open-sourcing-223gb-of-mountain-view-driving-data-f6b5593fbfa5
+
 ### Network Architecture:
 
 We train the weights of our network to minimize the mean squared error between the steering command output by the network and the command of either the human driver, or the adjusted steering command for off-center and rotated images. The network architecture is shown in training script. The network consists of 9 layers, including a normalization layer, 5 convolutional layers and 3 fully connected layers. The input image is split into YUV planes and passed to the network. The first layer of the network performs image normalization. The normalizer is hard-coded and is not adjusted in the learning process. Performing normalization in the network allows the normalization scheme to be altered with the network architecture and to be accelerated via GPU processing.
