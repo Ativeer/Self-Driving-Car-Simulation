@@ -5,6 +5,7 @@
 Trained a convolutional neural network (CNN) to map raw pixels from a single front-facing camera directly to steering commands. This end-to-end approach proved surprisingly powerful. With minimum training data from humans the system learns to drive in traffic on local roads with or without lane markings and on highways. It also operates in areas with unclear visual guidance such as in parking lots and on unpaved roads.
 The system automatically learns internal representations of the necessary processing steps such as detecting useful road features with only the human steering angle as the training signal. I never explicitly trained it to detect, for example, the outline of roads.
 
+A more detail report can be found in the Reports folder.
 
 ### Introduction:
 
